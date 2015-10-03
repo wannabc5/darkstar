@@ -22,7 +22,7 @@ require("scripts/globals/status");
 function onItemCheck(target)
 local result = 0;
 	if (target:hasStatusEffect(EFFECT_FOOD) == true or target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD) == true) then
-		result = 246;
+	result = 246;
 	end
 return result;
 end;
@@ -32,7 +32,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addStatusEffect(EFFECT_FOOD,0,0,14400,4589);
+target:addStatusEffect(EFFECT_FOOD,0,0,14400,4589);
 end;
 
 -----------------------------------
@@ -40,14 +40,18 @@ end;
 -----------------------------------
 
 function onEffectGain(target,effect)
-	target:addMod(MOD_STR, 4);
-	target:addMod(MOD_AGI, 1);
-	target:addMod(MOD_VIT, 2);
-	target:addMod(MOD_INT, -2);
-	target:addMod(MOD_FOOD_ATTP, 25);
-	target:addMod(MOD_FOOD_ATT_CAP, 50);
-	target:addMod(MOD_FOOD_RATTP, 25);
-	target:addMod(MOD_FOOD_RATT_CAP, 50);
+target:addMod(MOD_STR, 900);
+target:addMod(MOD_INT, 900);
+target:addMod(MOD_FOOD_ATTP, 150);
+target:addMod(MOD_FOOD_ATT_CAP, 300);
+target:addPetMod(MOD_FOOD_ACCP, 500);
+target:addPetMod(MOD_FOOD_ATTP, 100);
+target:addPetMod(MOD_FOOD_ATT_CAP, 10000)
+target:addPetMod(MOD_HP, 1000);
+target:addPetMod(MOD_FOOD_RATTP, 500);
+target:addPetMod(MOD_FOOD_MATT, 500);
+
+
 end;
 
 -----------------------------------------
@@ -55,12 +59,15 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-	target:delMod(MOD_STR, 4);
-	target:delMod(MOD_AGI, 1);
-	target:delMod(MOD_VIT, 2);
-	target:delMod(MOD_INT, -2);
-	target:delMod(MOD_FOOD_ATTP, 25);
-	target:delMod(MOD_FOOD_ATT_CAP, 50);
-	target:delMod(MOD_FOOD_RATTP, 25);
-	target:delMod(MOD_FOOD_RATT_CAP, 50);
+target:delMod(MOD_STR, 25);
+target:delMod(MOD_INT, 25);
+target:delMod(MOD_FOOD_ATTP, 150);
+target:delMod(MOD_FOOD_ATT_CAP, 300);
+target:delPetMod(MOD_FOOD_ACCP, 500);
+target:delPetMod(MOD_FOOD_ATTP, 100);
+target:delPetMod()
+target:delPetMod(MOD_HP, 1000);
+target:delPetMod(MOD_FOOD_RATTP, 500);
+
+
 end;

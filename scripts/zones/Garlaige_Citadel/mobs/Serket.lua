@@ -4,6 +4,7 @@
 -----------------------------------
 
 require("scripts/globals/titles");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobSpawn Action
@@ -18,10 +19,7 @@ end;
 
 function onMobDeath(mob, killer)
 
-    killer:addTitle(SERKET_BREAKER);
+    killer:addTitle(Hahava_Condemner);
 
-    -- Set Serket's spawnpoint and respawn time (21-24 hours)
-    UpdateNMSpawnPoint(mob:getID());
-    mob:setRespawnTime(math.random((75600),(86400)));
-
+    
 end;

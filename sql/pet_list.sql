@@ -96,7 +96,7 @@ INSERT INTO `pet_list` VALUES (51, 'Lucky Lulush', 4612, 76, 99, 7200, 0);
 INSERT INTO `pet_list` VALUES (52, 'Fatso Fargann', 4613, 81, 99, 7200, 0);
 INSERT INTO `pet_list` VALUES (53, 'Discreet Louise', 4615, 79, 99, 7200, 0);
 INSERT INTO `pet_list` VALUES (54, 'Swift Sieghard', 4617, 86, 94, 7200, 0);
-INSERT INTO `pet_list` VALUES (55, 'Dipper Yuly', 4627, 76, 99, 7200, 0);
+INSERT INTO `pet_list` VALUES (55, 'Dipper Yuly', 4627, 150, 150, 7200, 0);
 INSERT INTO `pet_list` VALUES (56, 'Flowerpot Merle', 4628, 76, 99, 10800, 0);
 INSERT INTO `pet_list` VALUES (57, 'Nursery Nazuna', 4629, 76, 86, 7200, 0);
 INSERT INTO `pet_list` VALUES (58, 'Mailbuster Ceta', 4630, 85, 95, 7200, 0);
